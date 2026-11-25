@@ -1,0 +1,15 @@
+[package]
+name = "getaway-tandem"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.16"
+rand = "0.9"
+
+# Faster iteration: lightly optimize our code, fully optimize dependencies.
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
